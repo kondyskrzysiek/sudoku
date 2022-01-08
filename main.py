@@ -79,7 +79,7 @@ def check_point(tab, x, y, value):
     return True
 
 
-def dobieranie(value, tab, cx, cy):
+def matching_numbers(value, tab, cx, cy):
     while value <= 9:
         if check_point(tab, cx, cy, value):
             tab[cy][cx] = value
@@ -93,7 +93,11 @@ def dobieranie(value, tab, cx, cy):
     return False
 
 
+<<<<<<< HEAD
 def typing(tab):
+=======
+def write_list(tab):
+>>>>>>> 77ded23d6545a5cb5d6852daddab02c0e543274b
     tabw = []
     cx = 0
     cy = 0
@@ -115,7 +119,7 @@ def typing(tab):
         value = tab[cy][cx] + 1
         if tab[cy][cx] >= 1:
             tab[cy][cx] = 0
-        if dobieranie(value, tab, cx, cy):
+        if matching_numbers(value, tab, cx, cy):
             j -= 2
         j += 1
 
@@ -134,8 +138,6 @@ if __name__ == "__main__":
     #        [0, 0, 0,    0, 0, 0,     0, 0, 0],     # 7
     #        [0, 0, 0,    0, 0, 0,     0, 0, 0], ]   # 8
 
-    # tab = [[col*row for col in range(9)] for row in range(9)]
-
     # tab = [[3, 0, 0, 1, 0, 0, 0, 0, 7],  # 0
     #        [8, 4, 0, 5, 9, 0, 0, 6, 1],  # 1
     #        [0, 5, 1, 0, 0, 0, 9, 3, 0],  # 2
@@ -148,7 +150,11 @@ if __name__ == "__main__":
     #        [1, 7, 0, 0, 3, 5, 0, 2, 6],  # 7
     #        [6, 0, 0, 0, 0, 1, 0, 0, 5], ]  # 8
 
+<<<<<<< HEAD
     # writing to the blackboard
+=======
+    # write_list do tablicy
+>>>>>>> 77ded23d6545a5cb5d6852daddab02c0e543274b
     tab = []
     quantity = 0
     while quantity < 9:
@@ -165,7 +171,12 @@ if __name__ == "__main__":
     for i in tab:
         print(i)
 
+<<<<<<< HEAD
     typing(tab)
+=======
+    write_list(tab)
+
+>>>>>>> 77ded23d6545a5cb5d6852daddab02c0e543274b
 
     # displaying the results
     print("\n\n\n")
