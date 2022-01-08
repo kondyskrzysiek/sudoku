@@ -93,12 +93,11 @@ def dobieranie(value, tab, cx, cy):
     return False
 
 
-def wpisywanie(tab):
+def typing(tab):
     tabw = []
     cx = 0
     cy = 0
     j = 0
-    value = 0
     while cx <= 8 and cy <= 8:
         if tab[cy][cx] == 0:
             tabw.append([cx, cy])
@@ -149,24 +148,26 @@ if __name__ == "__main__":
     #        [1, 7, 0, 0, 3, 5, 0, 2, 6],  # 7
     #        [6, 0, 0, 0, 0, 1, 0, 0, 5], ]  # 8
 
-    # wpisywanie do tablicy
+    # writing to the blackboard
     tab = []
-    ilosc = 0
-    while ilosc < 9:
+    quantity = 0
+    while quantity < 9:
+        print(quantity)
         liczba_str = input(">> ")
-        for j in liczba_str.split(" "):
-            tab.append(int(j))
-        ilosc += 1
+        if liczba_str != '':
+            for j in liczba_str.split(" "):
+                tab.append(int(j))
+            quantity += 1
+
 
     tab = [[tab[i * 9 + j] for j in range(9)] for i in range(9)]
 
     for i in tab:
         print(i)
 
-    wpisywanie(tab)
+    typing(tab)
 
-
-    #displaying the results
+    # displaying the results
     print("\n\n\n")
     space = 1
     tabulator = 1
