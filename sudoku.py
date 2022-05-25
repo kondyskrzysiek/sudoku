@@ -93,15 +93,12 @@ def matching_numbers(value, tab, cx, cy):
     return False
 
 
-<<<<<<< HEAD
-def typing(tab):
-=======
 def write_list(tab):
->>>>>>> 77ded23d6545a5cb5d6852daddab02c0e543274b
     tabw = []
     cx = 0
     cy = 0
     j = 0
+    value = 0
     while cx <= 8 and cy <= 8:
         if tab[cy][cx] == 0:
             tabw.append([cx, cy])
@@ -150,35 +147,24 @@ if __name__ == "__main__":
     #        [1, 7, 0, 0, 3, 5, 0, 2, 6],  # 7
     #        [6, 0, 0, 0, 0, 1, 0, 0, 5], ]  # 8
 
-<<<<<<< HEAD
-    # writing to the blackboard
-=======
     # write_list do tablicy
->>>>>>> 77ded23d6545a5cb5d6852daddab02c0e543274b
     tab = []
-    quantity = 0
-    while quantity < 9:
-        print(quantity)
+    ilosc = 0
+    while ilosc < 9:
         liczba_str = input(">> ")
-        if liczba_str != '':
-            for j in liczba_str.split(" "):
-                tab.append(int(j))
-            quantity += 1
-
+        for j in liczba_str.split(" "):
+            tab.append(int(j))
+        ilosc += 1
 
     tab = [[tab[i * 9 + j] for j in range(9)] for i in range(9)]
 
     for i in tab:
         print(i)
 
-<<<<<<< HEAD
-    typing(tab)
-=======
     write_list(tab)
 
->>>>>>> 77ded23d6545a5cb5d6852daddab02c0e543274b
 
-    # displaying the results
+    #displaying the results
     print("\n\n\n")
     space = 1
     tabulator = 1
